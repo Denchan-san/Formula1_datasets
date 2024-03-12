@@ -1,0 +1,334 @@
+raceId,Cause,Deployed,Retreated,FullLaps
+1,Accident,19,25.0,5
+1,Accident,56,,3
+2,Rain,31,,1
+3,Rain,1,9.0,8
+3,Debris from accident,19,23.0,3
+5,Accident,1,6.0,3
+12,Accident,1,5.0,3
+13,Accident,53,,1
+14,Accident,21,26.0,5
+15,Accident,45,50.0,5
+16,Accident,1,6.0,5
+18,Accident,1,3.0,1
+18,Accident,27,31.0,3
+18,Accident,45,49.0,3
+21,Accident,1,4.0,2
+21,Accident,23,29.0,6
+22,Accident,1,3.0,1
+23,Accident,8,11.0,2
+23,Accident,62,68.0,5
+24,Stranded car,17,22.0,5
+27,Accident,36,42.0,5
+31,Rain,1,3.0,2
+32,Accident,16,20.0,3
+32,Accident,51,54.0,3
+35,Accident,2,5.0,2
+38,Accident,1,4.0,2
+41,Accident,22,27.0,4
+41,Accident,27,34.0,7
+41,Debris from accident,50,55.0,3
+41,Accident,56,61.0,4
+45,Accidents,3,8.0,4
+48,Accident,1,7.0,5
+50,Rain,1,20.0,19
+50,Accident,42,49.0,6
+55,Accident,1,4.0,3
+55,Accident,8,10.0,1
+55,Accident,33,36.0,2
+55,Accident,36,41.0,4
+56,Accident,1,3.0,1
+57,Stranded car,3,4.0,1
+59,Stranded car,51,53.0,1
+60,Accident,2,4.0,1
+61,Accident,2,4.0,1
+61,Accident,61,64.0,2
+62,Two accidents,1,7.0,5
+65,Accident,26,31.0,4
+66,Stranded car,13,16.0,2
+70,Accident,3,7.0,3
+76,Stranded car,25,29.0,3
+78,Accident,46,52.0,5
+81,Accident,1,3.0,1
+86,Accident,11,14.0,2
+87,Debris from accident,1,3.0,2
+88,Accident,1,8.0,6
+89,Loose drain cover,19,25.0,5
+89,Accident,29,35.0,5
+95,Accident,3,8.0,4
+95,Accident,42,47.0,4
+98,Accident,1,6.0,4
+98,Accident,11,20.0,8
+100,Accident,40,46.0,5
+103,Accident,1,5.0,3
+103,Accident,31,35.0,2
+103,Debris from accident,39,42.0,3
+108,Two accidents,8,11.0,2
+108,Stranded car,16,20.0,3
+110,Rain,1,9.0,8
+110,Accident,18,23.0,5
+110,Three accidents,27,30.0,2
+110,Accident,33,37.0,3
+110,Two accidents,54,,2
+112,Multiple accidents,0,6.0,5
+113,Stranded car,1,5.0,3
+114,Stranded car,1,5.0,3
+118,Debris from car,5,8.0,2
+118,Man on track,12,16.0,3
+119,Multiple accidents,1,4.0,4
+124,Accident,1,6.0,4
+124,Accident,9,12.0,2
+129,Stranded car,24,28.0,3
+129,Accident,28,37.0,8
+131,Stranded car,14,18.0,3
+141,Accident,6,16.0,10
+142,Rain,4,11.0,6
+143,Stranded car,1,3.0,1
+146,Four stranded cars,1,4.0,2
+148,Accident,21,24.0,2
+154,Accident,6,7.0,1
+158,Accident,7,11.0,3
+167,Accident,1,3.0,1
+168,Man on track,25,29.0,3
+168,Accident,30,32.0,1
+170,Rain,1,2.0,1
+171,Multiple accidents,1,12.0,11
+174,Accident,1,3.0,1
+175,Accident,15,18.0,2
+175,Accident,22,26.0,4
+180,Accident,1,3.0,1
+180,Accident,3,8.0,4
+180,Accident,35,41.0,5
+180,Accident,66,,3
+181,Stranded car/Rain,25,36.0,10
+188,Accident,1,7.0,6
+197,Accident,1,6.0,4
+197,Debris,15,18.0,2
+197,Accident,20,23.0,2
+199,Rain,42,49.0,6
+200,Two accidents,1,4.0,2
+203,Accident,28,33.0,4
+209,Accident,1,5.0,4
+218,Rain,1,4.0,3
+226,Accident,28,33.0,4
+236,Accident,13,18.0,4
+250,Rain,28,33.0,4
+259,Accident,1,6.0,4
+274,Accident/Rain,29,38.0,8
+281,Stranded car,38,40.0,1
+338,Accident,2,5.0,2
+340,Accident,1,4.0,2
+340,Debris from accident,22,26.0,3
+342,Accident,1,7.0,5
+342,Accident,31,34.0,2
+342,Loose drain cover,43,46.0,2
+342,Accident,75,,3
+345,Accident,10,15.0,4
+346,Debris from car,28,31.0,2
+348,Debris from car,15,18.0,2
+349,Accident,2,4.0,1
+349,Accident,38,41.0,2
+351,Accident,3,6.0,2
+351,Accident,31,36.0,4
+352,Accident,1,7.0,5
+353,Rain,1,4.0,3
+353,Rain,4,18.0,14
+353,Accident,19,24.0,4
+353,Accident,31,35.0,3
+354,Accident,51,56.0,4
+355,Accident,1,6.0,4
+618,Accident,33,39.0,5
+846,Accident,35,39.0,3
+846,Multiple accidents,69,73.0,3
+847,Rain,1,5.0,5
+847,Accident,9,13.0,4
+847,Rain,20,26.0,6
+847,Rain,26,35.0,8
+847,Accident,37,41.0,3
+847,Debris from accident,56,61.0,4
+852,Accident,13,17.0,3
+853,Accident,1,4.0,3
+854,Accident,30,34.0,3
+855,Debris from accident,24,28.0,3
+856,Accident,17,21.0,3
+860,Stranded car,37,42.0,4
+861,Rain,6,10.0,4
+861,Rain,10,15.0,5
+865,Accident,2,4.0,1
+867,Debris from accident,27,34.0,6
+871,Accident,1,5.0,4
+873,Accident,33,39.0,5
+873,Accident,40,43.0,2
+874,Accident,1,3.0,1
+877,Accident,9,15.0,5
+877,Accident,39,43.0,3
+879,Debris,23,30.0,6
+879,Accident,70,,1
+885,Accident,31,39.0,7
+885,Accident,47,48.0,1
+885,Accident,62,67.0,4
+887,Debris from car,14,22.0,7
+887,Stranded car,41,46.0,4
+888,Stranded car,23,30.0,6
+893,Accident,25,31.0,5
+894,Debris,31,37.0,5
+894,Vehicle on track,38,41.0,2
+898,Accident,1,5.0,4
+900,Debris from car,12,16.0,3
+902,Accident,41,47.0,6
+905,Accident,1,4.0,3
+905,Accident,26,31.0,5
+906,Accident,1,8.0,6
+908,Accident,1,3.0,1
+909,Accident,1,3.0,1
+910,Two accidents,9,14.0,4
+910,Accident,23,27.0,4
+913,Debris from accident,31,38.0,6
+914,Rain,1,3.0,2
+914,Rain,3,10.0,6
+914,Accident,44,,4
+916,Accident,1,5.0,3
+931,Accident,59,71.0,11
+928,Stranded car,54,,2
+926,Accident,1,4.0,2
+927,Accident,4,7.0,2
+933,Accident,1,7.0,5
+934,Accident,1,4.0,2
+936,Accident,43,49.0,5
+939,Accident,16,19.0,3
+939,Man on track,37,41.0,3
+941,Accident,1,4.0,2
+941,Accident,12,17.0,5
+942,Stranded car,28,33.0,4
+942,Accident,43,47.0,3
+943,Accident,53,58.0,4
+948,Accident,17,20.0,2
+950,Debris from car,5,9.0,5
+951,Accident,1,4.0,2
+953,Rain,1,8.0,7
+956,Debris from car,27,32.0,4
+957,Rain,1,6.0,5
+966,Accident,1,4.0,2
+967,Rain,1,8.0,7
+967,Accident,13,20.0,6
+967,Rain,21,32.0,11
+967,Accident,48,56.0,7
+970,Accident,4,8.0,3
+971,Accident,14,17.0,3
+972,Accident,1,4.0,2
+974,Accident,60,67.0,6
+975,Accident,1,4.0,2
+976,Stranded car,12,17.0,4
+976,Debris from car,17,20.0,2
+976,Debris from accident,20,24.0,3
+978,Accident,1,5.0,4
+979,Accident,3,6.0,2
+980,Debris from accident,30,34.0,4
+982,Accident,1,5.0,3
+982,Accident,11,15.0,3
+982,Accident,38,42.0,3
+984,Accident,1,4.0,2
+987,Accident,1,6.0,5
+989,Stranded car,28,32.0,2
+991,Debris from accident,31,36.0,4
+992,Two accidents,1,6.0,4
+992,Two accidents,40,48.0,7
+993,Accident,1,7.0,5
+995,Accident,1,5.0,3
+996,Accident,1,6.0,4
+998,Accident,33,38.0,4
+998,Accident,38,42.0,3
+999,Accident,52,58.0,5
+1001,Accident,1,5.0,3
+1002,Accident,1,4.0,3
+1003,Accident,1,5.0,3
+1005,Debris from accident,3,8.0,4
+1009,Accident,1,5.0,3
+1011,Two stranded cars,55,,2
+1014,Accident,46,53.0,6
+1015,Debris from accident,11,15.0,4
+1019,Accident,20,24.0,4
+1020,Accident,2,5.0,2
+1020,Accident,29,34.0,4
+1020,Accident,41,46.0,4
+1020,Accident,57,60.0,2
+1022,Accident,1,5.0,3
+1024,Debris from accident,34,41.0,6
+1024,Stranded car,44,48.0,3
+1024,Accident,50,52.0,2
+1025,Accident,2,4.0,2
+1025,Accident,29,33.0,3
+1029,Stranded car,54,60.0,5
+1029,Accident,66,70.0,3
+1031,Stranded car,26,31.0,4
+1031,Stranded car,50,55.0,4
+1031,Stranded car,55,61.0,5
+1032,Debris from accident,1,4.0,2
+1034,Accident,2,6.0,3
+1034,Accident,13,19.0,5
+1037,Accident,11,15.0,4
+1038,Stranded car,20,24.0,3
+1038,Accident,25,28.0,2
+1039,Accident,1,7.0,5
+1039,Accident,7,10.0,2
+1039,Accident,45,48.0,2
+1040,Two accidents,1,6.0,4
+1041,Stranded car,45,50.0,5
+1043,Accident,51,58.0,5
+1045,Accident,2,9.0,6
+1045,Stranded car,54,,3
+1046,Accident,1,7.0,5
+1046,Accident,64,69.0,3
+1047,Stranded car,12,14.0,1
+1053,Two accidents,2,7.0,4
+1074,Stranded car,46,51.0,4
+1052,Accident,1,4.0,2
+1054,Accident,2,7.0,4
+1055,Stranded car,8,11.0,2
+1057,Accident,32,36.0,3
+1057,Accident,47,49.0,1
+1060,Stranded car,1,4.0,2
+1062,Accident,1,2.0,1
+1063,Rain,1,,2
+1065,Accident,26,32.0,5
+1070,Accident,1,5.0,3
+1071,Debris from accident,6,10.0,3
+1072,Accident,10,15.0,4
+1073,Accident,54,58.0,3
+1075,Stranded car,16,21.0,4
+1076,Stranded car,4,7.0,2
+1076,Stranded car,24,27.0,3
+1077,Stranded car,1,5.0,4
+1078,Stranded car,40,47.0,6
+1080,Rain,1,3.0,1
+1080,Stranded car,27,33.0,5
+1082,Stranded car,49,55.0,5
+1083,Stranded car,39,43.0,4
+1085,Stranded car,18,21.0,2
+1087,Stranded car,2,5.0,3
+1088,Stranded car,56,61.0,4
+1089,Stranded car,47,,6
+1091,Stranded car,8,11.0,3
+1091,Stranded car,36,40.0,3
+1092,Stranded car/Rain,1,6.0,5
+1093,Stranded car,18,22.0,4
+1093,Accident,23,26.0,3
+1095,Accident,1,7.0,7
+1095,Stranded car,55,60.0,5
+1099,Stranded car,18,21.0,2
+1100,Stranded car,1,4.0,3
+1100,Stranded car,7,10.0,3
+1100,Debris from accident,55,57.0,3
+1101,Stranded car,10,14.0,3
+1106,Debris from accident,12,17.0,4
+1107,Debris from accident,1,4.0,3
+1108,Stranded car,32,39.0,6
+1111,Stranded car,16,22.0,5
+1111,Rain,64,67.0,2
+1113,Debris from accident,20,23.0,2
+1114,Debris from accident,1,5.0,4
+1115,Stranded car,1,5.0,4
+1117,Accident,34,36.0,2
+1118,Debris from accident,1,5.0,4
+1119,Stranded car,4,7.0,3
+1119,Debris from accident,26,29.0,3
