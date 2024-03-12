@@ -1,0 +1,39 @@
+driverId,Age,Date Of Accident,Event,Car,Session
+102,34.0,5/1/94,1994 San Marino Grand Prix,Williams,Race
+107,33.0,4/30/94,1994 San Marino Grand Prix,Simtek,Qualifying
+203,32.0,5/8/82,1982 Belgian Grand Prix,Ferrari,Qualifying
+204,23.0,6/13/82,1982 Canadian Grand Prix,Osella,Race
+221,35.0,8/1/80,,Alfa Romeo,Test
+238,34.0,9/10/78,1978 Italian Grand Prix,Lotus,Race
+252,27.0,3/5/77,1977 South African Grand Prix,Shadow,Race
+266,31.0,8/29/77,1977 Shellsport Championship,McGuire,Practice
+288,38.0,8/19/75,1975 Austrian Grand Prix,Penske,Practice
+309,35.0,3/22/74,1974 South African Grand Prix,Shadow,Pre-race test
+324,25.0,10/6/74,1974 United States Grand Prix,Surtees,Race
+327,29.0,10/6/73,1973 United States Grand Prix,Tyrrell,Qualifying
+335,25.0,7/29/73,1973 Dutch Grand Prix,March,Race
+346,35.0,10/24/71,1971 World Championship Victory Race,BRM,Race
+358,28.0,9/5/70,1970 Italian Grand Prix,Lotus,Qualifying
+361,28.0,6/7/70,1970 Dutch Grand Prix,De Tomaso,Race
+377,40.0,7/7/68,1968 French Grand Prix,Honda,Race
+383,36.0,8/14/67,,Brabham,Test
+385,31.0,5/7/67,1967 Monaco Grand Prix,Ferrari,Race
+399,33.0,8/7/66,1966 German Grand Prix,Brabham,Race
+423,33.0,8/2/69,1969 German Grand Prix,BMW,Practice
+454,20.0,11/1/62,1962 Mexican Grand Prix,Lotus,Practice
+473,25.0,12/21/62,1962 Natal Grand Prix,Lotus,Practice
+501,38.0,5/13/60,1960 BRDC International Trophy,Cooper,Practice
+502,26.0,6/19/60,1960 Belgian Grand Prix,Lotus,Race
+505,22.0,6/19/60,1960 Belgian Grand Prix,Cooper,Race
+543,38.0,6/15/61,,Cooper,Test
+577,33.0,7/6/58,1958 French Grand Prix,Ferrari,Race
+581,26.0,8/3/58,1958 German Grand Prix,Ferrari,Race
+590,28.0,9/19/58,1958 Moroccan Grand Prix,Vanwall,Race
+597,29.0,5/30/58,1958 Indianapolis 500,Kurtis Kraft,Race
+608,26.0,3/14/57,,Ferrari,Test
+631,36.0,5/15/57,1957 Indianapolis 500,Kurtis Kraft,Practice
+657,36.0,5/30/55,1955 Indianapolis 500,Kurtis Kraft,Race
+670,30.0,7/31/54,1954 German Grand Prix,Maserati,Practice
+675,33.0,5/16/55,1955 Indianapolis 500,Kuzma,Practice
+733,50.0,5/15/53,1953 Indianapolis 500,Kurtis Kraft,Practice
+824,25.0,10/5/14,2014 Japanese Grand Prix,Marussia,Race
