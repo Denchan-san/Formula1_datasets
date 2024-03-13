@@ -47,7 +47,7 @@ CREATE TABLE drivers (
     race_wins INT,
     podiums INT,
     fastest_laps INT,
-    points INT,
+    points FLOAT,
     active BOOLEAN,
     championships_years TEXT,
     decade INT,
@@ -104,7 +104,7 @@ CREATE TABLE lap_times (
     driver_id INT REFERENCES drivers(driver_id),
     lap INT,
     position INT,
-    time VARCHAR(10),
+    time VARCHAR(30),
     milliseconds INT
 );
 
@@ -116,9 +116,9 @@ CREATE TABLE driver_standings (
     driver_standings_id SERIAL PRIMARY KEY,
     race_id INT REFERENCES races(race_id),
     driver_id INT REFERENCES drivers(driver_id),
-    points INT,
+    points FLOAT,
     position INT,
-    position_text VARCHAR(2),
+    position_text VARCHAR(10),
     wins INT
 );
 
@@ -130,7 +130,7 @@ CREATE TABLE constructor_standings (
     constructor_standings_id SERIAL PRIMARY KEY,
     race_id INT REFERENCES races(race_id),
     constructor_id INT REFERENCES constructors(constructor_id),
-    points INT,
+    points FLOAT,
     position INT,
     position_text VARCHAR(2),
     wins INT
@@ -144,7 +144,7 @@ CREATE TABLE constructor_results (
     constructor_results_id SERIAL PRIMARY KEY,
     race_id INT REFERENCES races(race_id),
     constructor_id INT REFERENCES constructors(constructor_id),
-    points INT,
+    points FLOAT,
     status VARCHAR(2)
 );
 
@@ -158,7 +158,7 @@ CREATE TABLE pit_stops (
     stop INT,
     lap INT,
     time VARCHAR(10),
-    duration FLOAT,
+    duration VARCHAR(30),
     milliseconds INT
 );
 
