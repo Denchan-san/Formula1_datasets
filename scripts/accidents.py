@@ -1,4 +1,6 @@
 import pandas as pd
+import numpy as np
+from datetime import datetime, timedelta
 
 accidents_df = pd.read_csv('input_csv/fatal_accidents_drivers.csv')
 drivers_df = pd.read_csv('input_csv/drivers.csv')
@@ -27,5 +29,12 @@ merged_df = pd.merge(merged_df, races_df[['raceId', 'Event']], on=['Event'], how
 merged_df = pd.merge(merged_df, constructors_df[['constructorId', 'Car']], on=['Car'], how='inner')
 
 merged_df.drop(['forename', 'surname', 'Driver', 'Car', 'Event'], axis=1, inplace=True)
+
+merged_df['Date Of Accident'] = pd.to_datetime(merged_df['Date Of Accident'], format='mixed')
+future_dates = merged_df['Date Of Accident'] > datetime.now()
+merged_df.loc[future_dates, 'Date Of Accident'] -= timedelta(days=36525)
+
+merged_df['Age'].replace('', np.nan, inplace=True)
+merged_df['Age'] = merged_df['Age'].astype(float).astype('Int64')
 
 merged_df.to_csv('output_csv/accidents.csv', index=False)
