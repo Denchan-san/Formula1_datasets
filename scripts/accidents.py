@@ -9,9 +9,7 @@ constructors_df = pd.read_csv('output_csv/constructors.csv')
 
 def concat_name(row):
     name_parts = row['Driver'].split()
-    # Assuming the last word in the name is the surname
     surname = name_parts[-1]
-    # Assuming the rest are forenames
     forename = ' '.join(name_parts[:-1])
     return pd.Series([forename, surname])
 
@@ -19,7 +17,6 @@ def concat_race(row):
     race = str(row['year']) + ' ' + row['name']
     return pd.Series([race])
 
-# Apply the function to create 'forename' and 'surname' columns in the second dataset
 accidents_df[['forename', 'surname']] = accidents_df.apply(concat_name, axis=1)
 races_df['Event'] = races_df.apply(concat_race, axis=1)
 constructors_df.rename(columns={'name': 'Car'}, inplace=True)
