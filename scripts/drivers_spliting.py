@@ -1,18 +1,36 @@
-import pandas as pd
 import csv
+import os
 
-df_split_names = pd.read_csv('input_csv/drivers.csv')
+# Define the input and output file paths
+input_file = 'drivers.csv'
+output_file = 'drivers2.csv'
 
-df_not_split_names = pd.read_csv('input_csv/F1Drivers_Dataset.csv')
+# Function to split the Driver column into Name and Surname
+def split_name(driver):
+    parts = driver.split(' ')
+    if len(parts) > 1:
+        surname = parts[-1]
+        name = ' '.join(parts[:-1])
+    else:
+        name = parts[0]
+        surname = ''
+    return name, surname
 
-def concat_name(row):
-    name = row['forename'] + ' ' + row['surname']
-    return pd.Series([name])
+# Read the CSV file and write the modified data to a new CSV file
+with open(input_file, 'r') as csv_in, open(output_file, 'w', newline='') as csv_out:
+    reader = csv.DictReader(csv_in)
+    fieldnames = [field for field in reader.fieldnames if field != 'Driver'] + ['Name', 'Surname']
+    writer = csv.DictWriter(csv_out, fieldnames=fieldnames)
+    writer.writeheader()
 
-df_split_names[['Driver']] = df_split_names.apply(concat_name, axis=1)
+    for row in reader:
+        # Split the Driver column into Name and Surname
+        name, surname = split_name(row['Driver'])
+        # Update the row with Name and Surname
+        row['Name'] = name
+        row['Surname'] = surname
+        # Write the updated row to the output CSV file without the 'Driver' column
+        del row['Driver']
+        writer.writerow(row)
 
-merged_df = pd.merge(df_split_names, df_not_split_names, on=['Driver'], how='inner')
-
-merged_df = merged_df.drop(columns=['forename', 'surname', 'Nationality'])
-
-merged_df.to_csv('output_csv/drivers.csv', index=False, quoting=csv.QUOTE_NONNUMERIC)
+print("Splitting of Driver names into Name and Surname is done!")
