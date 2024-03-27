@@ -1,10 +1,9 @@
 import pandas as pd
 import numpy as np
-import os
-from config import INPUT_CSV_DIR, OUTPUT_CSV_DIR
+from config import INPUT_CSV_DIR, OUTPUT_CSV_DIR, join
 
-driver_standings_path = os.path.join(INPUT_CSV_DIR, 'driver_standings.csv')
-constructor_standings_path = os.path.join(INPUT_CSV_DIR, 'constructor_standings.csv')
+driver_standings_path = join(INPUT_CSV_DIR, 'driver_standings.csv')
+constructor_standings_path = join(INPUT_CSV_DIR, 'constructor_standings.csv')
 driver_standings_df = pd.read_csv(driver_standings_path)
 constructor_standings_df = pd.read_csv(constructor_standings_path)
 
@@ -26,4 +25,4 @@ standings_df.drop(columns=['positionText'], inplace=True)
 
 standings_df = standings_df[['standingsId', 'eventId', 'driverId', 'constructorId', 'points', 'position', 'wins']]
 
-standings_df.to_csv(os.path.join(OUTPUT_CSV_DIR, 'standings.csv'), index=False)
+standings_df.to_csv(join(OUTPUT_CSV_DIR, 'standings.csv'), index=False)

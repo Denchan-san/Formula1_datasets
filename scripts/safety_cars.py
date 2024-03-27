@@ -1,10 +1,9 @@
 import pandas as pd
 import numpy as np
-import os
-from config import INPUT_CSV_DIR, OUTPUT_CSV_DIR
+from config import INPUT_CSV_DIR, OUTPUT_CSV_DIR, join
 
-safety_cars_path = os.path.join(INPUT_CSV_DIR, 'safety_cars.csv')
-races_path = os.path.join(INPUT_CSV_DIR, 'races.csv')
+safety_cars_path = join(INPUT_CSV_DIR, 'safety_cars.csv')
+races_path = join(INPUT_CSV_DIR, 'races.csv')
 safety_cars_df = pd.read_csv(safety_cars_path)
 races_df = pd.read_csv(races_path)
 
@@ -23,4 +22,4 @@ merged_df['Retreated'] = merged_df['Retreated'].astype(float).astype('Int64')
 
 merged_df = merged_df.rename(columns={'raceId': 'eventId'})
 
-merged_df.to_csv(os.path.join(OUTPUT_CSV_DIR, 'safety_cars.csv'), index=False)
+merged_df.to_csv(join(OUTPUT_CSV_DIR, 'safety_cars.csv'), index=False)

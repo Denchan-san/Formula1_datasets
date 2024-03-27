@@ -1,9 +1,8 @@
 import pandas as pd
-import os
-from config import INPUT_CSV_DIR, OUTPUT_CSV_DIR
+from config import INPUT_CSV_DIR, OUTPUT_CSV_DIR, join
 
-red_flags_path = os.path.join(INPUT_CSV_DIR, 'red_flags.csv')
-races_path = os.path.join(INPUT_CSV_DIR, 'races.csv')
+red_flags_path = join(INPUT_CSV_DIR, 'red_flags.csv')
+races_path = join(INPUT_CSV_DIR, 'races.csv')
 red_flags_df = pd.read_csv(red_flags_path)
 races_df = pd.read_csv(races_path)
 
@@ -19,4 +18,4 @@ merged_df.drop(['Race'], axis=1, inplace=True)
 
 merged_df = merged_df.rename(columns={'raceId': 'eventId'})
 
-merged_df.to_csv(os.path.join(OUTPUT_CSV_DIR, 'red_flags.csv'), index=False)
+merged_df.to_csv(join(OUTPUT_CSV_DIR, 'red_flags.csv'), index=False)

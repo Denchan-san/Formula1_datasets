@@ -1,10 +1,9 @@
 import pandas as pd
 import ast
-import os
-from config import INPUT_CSV_DIR, OUTPUT_CSV_DIR
+from config import INPUT_CSV_DIR, OUTPUT_CSV_DIR, join
 
-drivers_path = os.path.join(INPUT_CSV_DIR, 'F1Drivers_Dataset.csv')
-seasons_path = os.path.join(INPUT_CSV_DIR, 'seasons.csv')
+drivers_path = join(INPUT_CSV_DIR, 'F1Drivers_Dataset.csv')
+seasons_path = join(INPUT_CSV_DIR, 'seasons.csv')
 drivers = pd.read_csv(drivers_path)
 seasons = pd.read_csv(seasons_path)
 
@@ -18,4 +17,4 @@ for index, row in drivers.iterrows():
         is_championship = season_year in championship_years
         driver_seasons = driver_seasons.append({'driverId': driver_id, 'seasonId': season_id, 'isChampionship': is_championship}, ignore_index=True)
 
-driver_seasons.to_csv(os.path.join(OUTPUT_CSV_DIR, 'driver_seasons.csv'), index=False)
+driver_seasons.to_csv(join(OUTPUT_CSV_DIR, 'driver_seasons.csv'), index=False)

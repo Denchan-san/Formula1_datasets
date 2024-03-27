@@ -1,11 +1,10 @@
 import pandas as pd
 import numpy as np
-import os
-from config import INPUT_CSV_DIR, OUTPUT_CSV_DIR
+from config import INPUT_CSV_DIR, OUTPUT_CSV_DIR, join
 
-results_path = os.path.join(INPUT_CSV_DIR, 'results.csv')
-sprint_results_path = os.path.join(INPUT_CSV_DIR, 'sprint_results.csv')
-qualifying_path = os.path.join(INPUT_CSV_DIR, 'qualifying.csv')
+results_path = join(INPUT_CSV_DIR, 'results.csv')
+sprint_results_path = join(INPUT_CSV_DIR, 'sprint_results.csv')
+qualifying_path = join(INPUT_CSV_DIR, 'qualifying.csv')
 results_df = pd.read_csv(results_path)
 sprint_results_df = pd.read_csv(sprint_results_path)
 qualifying_df = pd.read_csv(qualifying_path)
@@ -62,4 +61,4 @@ event_facts_df = event_facts_df[[
 
 event_facts_df = event_facts_df.drop(['race_positionText', 'sprint_positionText'], axis=1)
 
-event_facts_df.to_csv(os.path.join(OUTPUT_CSV_DIR, 'event_facts.csv'), index=False)
+event_facts_df.to_csv(join(OUTPUT_CSV_DIR, 'event_facts.csv'), index=False)

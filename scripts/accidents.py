@@ -1,11 +1,12 @@
 import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
+from config import INPUT_CSV_DIR, OUTPUT_CSV_DIR, join
 
-accidents_df = pd.read_csv('input_csv/fatal_accidents_drivers.csv')
-drivers_df = pd.read_csv('input_csv/drivers.csv')
-races_df = pd.read_csv('output_csv/races.csv')
-constructors_df = pd.read_csv('output_csv/constructors.csv')
+accidents_df = pd.read_csv(join(INPUT_CSV_DIR, 'fatal_accidents_drivers.csv'))
+drivers_df = pd.read_csv(join(INPUT_CSV_DIR, 'drivers.csv'))
+races_df = pd.read_csv(join(INPUT_CSV_DIR,'races.csv'))
+constructors_df = pd.read_csv(join(OUTPUT_CSV_DIR, 'constructors.csv'))
 
 def concat_name(row):
     name_parts = row['Driver'].split()
@@ -34,4 +35,4 @@ merged_df.loc[future_dates, 'Date Of Accident'] -= timedelta(days=36525)
 merged_df['Age'].replace('', np.nan, inplace=True)
 merged_df['Age'] = merged_df['Age'].astype(float).astype('Int64')
 
-merged_df.to_csv('output_csv/accidents.csv', index=False)
+merged_df.to_csv(join(OUTPUT_CSV_DIR, 'accidents.csv'), index=False)
