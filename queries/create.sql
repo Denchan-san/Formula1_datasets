@@ -35,11 +35,19 @@ CREATE TABLE drivers (
     driver_ref VARCHAR(30),
     number INT,
     code VARCHAR(3),
+    forename VARCHAR(30),
+    surname VARCHAR(30),
     dob DATE,
     nationality VARCHAR(30),
-    url TEXT,
-    name VARCHAR(100),
-    seasons TEXT,
+    url TEXT
+);
+
+/*---------------------------------------------------
+DRIVERS CAREER STATS
+---------------------------------------------------*/
+
+CREATE TABLE drivers_career_stats (
+    driver_id INT PRIMARY KEY REFERENCES drivers(driver_id),
     championships INT,
     race_entries INT,
     race_starts INT,
@@ -49,7 +57,6 @@ CREATE TABLE drivers (
     fastest_laps INT,
     points FLOAT,
     active BOOLEAN,
-    championships_years TEXT,
     decade INT,
     pole_rate FLOAT,
     start_rate FLOAT,
@@ -62,6 +69,26 @@ CREATE TABLE drivers (
 );
 
 /*---------------------------------------------------
+SEASONS
+---------------------------------------------------*/
+
+CREATE TABLE seasons (
+    season_id SERIAL PRIMARY KEY,
+    year INT,
+    url TEXT
+);
+
+/*---------------------------------------------------
+DRIVER SEASONS
+---------------------------------------------------*/
+
+CREATE TABLE driver_seasons (
+    driver_id INT REFERENCES drivers(driver_id),
+    season_id INT REFERENCES seasons(season_id),
+    is_championship BOOLEAN
+);
+
+/*---------------------------------------------------
 STATUS
 ---------------------------------------------------*/
 
@@ -71,12 +98,11 @@ CREATE TABLE status (
 );
 
 /*---------------------------------------------------
-RACES
+EVENTS
 ---------------------------------------------------*/
 
-CREATE TABLE races (
-    race_id SERIAL PRIMARY KEY,
-    year INT,
+CREATE TABLE events (
+    event_id SERIAL PRIMARY KEY,
     round INT,
     circuit_id INT REFERENCES circuits(circuit_id),
     name VARCHAR(100),
@@ -92,48 +118,8 @@ CREATE TABLE races (
     quali_date date,
     quali_time VARCHAR(8),
     sprint_date date,
-    sprint_time VARCHAR(8)
-);
-
-/*---------------------------------------------------
-LAP TIMES
----------------------------------------------------*/
-
-CREATE TABLE lap_times (
-    race_id INT REFERENCES races(race_id),
-    driver_id INT REFERENCES drivers(driver_id),
-    lap INT,
-    position INT,
-    time VARCHAR(30),
-    milliseconds INT
-);
-
-/*---------------------------------------------------
-DRIVER STANDINGS
----------------------------------------------------*/
-
-CREATE TABLE driver_standings (
-    driver_standings_id SERIAL PRIMARY KEY,
-    race_id INT REFERENCES races(race_id),
-    driver_id INT REFERENCES drivers(driver_id),
-    points FLOAT,
-    position INT,
-    position_text VARCHAR(10),
-    wins INT
-);
-
-/*---------------------------------------------------
-CONSTRUCTOR STANDINGS
----------------------------------------------------*/
-
-CREATE TABLE constructor_standings (
-    constructor_standings_id SERIAL PRIMARY KEY,
-    race_id INT REFERENCES races(race_id),
-    constructor_id INT REFERENCES constructors(constructor_id),
-    points FLOAT,
-    position INT,
-    position_text VARCHAR(2),
-    wins INT
+    sprint_time VARCHAR(8),
+    season_id INT REFERENCES seasons(season_id)
 );
 
 /*---------------------------------------------------
@@ -142,10 +128,37 @@ CONSTRUCTOR RESULTS
 
 CREATE TABLE constructor_results (
     constructor_results_id SERIAL PRIMARY KEY,
-    race_id INT REFERENCES races(race_id),
+    event_id INT REFERENCES events(event_id),
     constructor_id INT REFERENCES constructors(constructor_id),
     points FLOAT,
     status VARCHAR(2)
+);
+
+/*---------------------------------------------------
+LAP TIMES
+---------------------------------------------------*/
+
+CREATE TABLE lap_times (
+    event_id INT REFERENCES events(event_id),
+    driver_id INT REFERENCES drivers(driver_id),
+    lap INT,
+    position INT,
+    time VARCHAR(30),
+    milliseconds INT
+);
+
+/*---------------------------------------------------
+STANDINGS
+---------------------------------------------------*/
+
+CREATE TABLE standings (
+    standings_id SERIAL PRIMARY KEY,
+    event_id INT REFERENCES events(event_id),
+    driver_id INT REFERENCES drivers(driver_id),
+    constructor_id INT REFERENCES constructors(constructor_id),
+    points FLOAT,
+    position INT,
+    wins INT
 );
 
 /*---------------------------------------------------
@@ -153,7 +166,7 @@ PIT STOPS
 ---------------------------------------------------*/
 
 CREATE TABLE pit_stops (
-    race_id INT REFERENCES races(race_id),
+    event_id INT REFERENCES events(event_id),
     driver_id INT REFERENCES drivers(driver_id),
     stop INT,
     lap INT,
@@ -163,67 +176,41 @@ CREATE TABLE pit_stops (
 );
 
 /*---------------------------------------------------
-QUALIFYING
+EVENT FACTS
 ---------------------------------------------------*/
 
-CREATE TABLE qualifying (
-    qualify_id SERIAL PRIMARY KEY,
-    race_id INT REFERENCES races(race_id),
+CREATE TABLE event_facts (
+    event_fact_id SERIAL PRIMARY KEY,
+    event_id INT REFERENCES events(event_id),
     driver_id INT REFERENCES drivers(driver_id),
     constructor_id INT REFERENCES constructors(constructor_id),
     number INT,
-    position INT,
+    race_grid INT,
+    race_position INT,
+    race_position_order INT,
+    race_points FLOAT,
+    race_laps INT,
+    race_time VARCHAR(30),
+    race_milliseconds INT,
+    race_fastest_lap INT,
+    race_rank INT,
+    race_fastest_lap_time VARCHAR(10),
+    race_fastest_lap_speed VARCHAR(10),
+    race_status_id INT REFERENCES status(status_id),
+    sprint_grid INT,
+    sprint_position INT,
+    sprint_position_order INT,
+    sprint_points INT,
+    sprint_laps INT,
+    sprint_time VARCHAR(30),
+    sprint_milliseconds INT,
+    sprint_fastest_lap INT,
+    sprint_fastest_lap_time VARCHAR(10),
+    sprint_status_id INT REFERENCES status(status_id),
+    qualifying_position INT,
     q1 VARCHAR(10),
     q2 VARCHAR(10),
     q3 VARCHAR(10)
-);
-
-/*---------------------------------------------------
-RESULTS
----------------------------------------------------*/
-
-CREATE TABLE results (
-    result_id SERIAL PRIMARY KEY,
-    race_id INT REFERENCES races(race_id),
-    driver_id INT REFERENCES drivers(driver_id),
-    constructor_id INT REFERENCES constructors(constructor_id),
-    number INT,
-    grid INT,
-    position INT,
-    position_text VARCHAR(2),
-    position_order INT,
-    points INT,
-    laps INT,
-    time VARCHAR(30),
-    milliseconds INT,
-    fastest_lap INT,
-    rank INT,
-    fastest_lap_time VARCHAR(10),
-    fastest_lap_speed VARCHAR(10),
-    status_id INT REFERENCES status(status_id)
-);
-
-/*---------------------------------------------------
-SPRINT RESULTS
----------------------------------------------------*/
-
-CREATE TABLE sprint_results (
-    result_id SERIAL PRIMARY KEY,
-    race_id INT REFERENCES races(race_id),
-    driver_id INT REFERENCES drivers(driver_id),
-    constructor_id INT REFERENCES constructors(constructor_id),
-    number INT,
-    grid INT,
-    position INT,
-    position_text VARCHAR(2),
-    position_order INT,
-    points INT,
-    laps INT,
-    time VARCHAR(30),
-    milliseconds INT,
-    fastest_lap INT,
-    fastest_lap_time VARCHAR(10),
-    status_id INT REFERENCES status(status_id)
 );
 
 /*---------------------------------------------------
@@ -231,12 +218,10 @@ ACCIDENTS
 ---------------------------------------------------*/
 
 CREATE TABLE accidents (
-    driver_id INT REFERENCES drivers(driver_id),
+    event_fact_id INT REFERENCES event_facts(event_fact_id),
     age INT,
     date_of_accident DATE,
-    session VARCHAR(50),
-    race_id INT REFERENCES races(race_id),
-    constructor_id INT REFERENCES constructors(constructor_id)
+    session VARCHAR(50)
 );
 
 /*---------------------------------------------------
@@ -244,7 +229,7 @@ SAFETY CARS
 ---------------------------------------------------*/
 
 CREATE TABLE safety_cars (
-    race_id INT REFERENCES races(race_id),
+    event_id INT REFERENCES events(event_id),
     cause VARCHAR(50),
     deployed INT,
     retreated INT,
@@ -256,11 +241,9 @@ RED FLAGS
 ---------------------------------------------------*/
 
 CREATE TABLE red_flags (
-    race_id INT REFERENCES races(race_id),
+    event_id INT REFERENCES events(event_id),
     lap INT,
     resumed CHAR(1),
     incident TEXT,
     excluded TEXT
 );
-
-
