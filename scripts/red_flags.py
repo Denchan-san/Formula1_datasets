@@ -1,7 +1,11 @@
 import pandas as pd
+import os
+from config import INPUT_CSV_DIR, OUTPUT_CSV_DIR
 
-red_flags_df = pd.read_csv('input_csv/red_flags.csv')
-races_df = pd.read_csv('output_csv/races.csv')
+red_flags_path = os.path.join(INPUT_CSV_DIR, 'red_flags.csv')
+races_path = os.path.join(INPUT_CSV_DIR, 'races.csv')
+red_flags_df = pd.read_csv(red_flags_path)
+races_df = pd.read_csv(races_path)
 
 def concat_race(row):
     race = str(row['year']) + ' ' + row['name']
@@ -13,4 +17,6 @@ merged_df = pd.merge(races_df[['raceId', 'Race']], red_flags_df, on=['Race'], ho
 
 merged_df.drop(['Race'], axis=1, inplace=True)
 
-merged_df.to_csv('output_csv/red_flags.csv', index=False)
+merged_df = merged_df.rename(columns={'raceId': 'eventId'})
+
+merged_df.to_csv(os.path.join(OUTPUT_CSV_DIR, 'red_flags.csv'), index=False)

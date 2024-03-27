@@ -13,4 +13,6 @@ races['seasonId'] = races['year'].map(year_season_map)
 
 events = races.drop('year', axis=1)
 
+events = events.rename(columns={'raceId': 'eventId'})
+
 events.to_csv(os.path.join(OUTPUT_CSV_DIR, 'events.csv'), index=False)

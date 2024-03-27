@@ -1,4 +1,4 @@
-raceId,Lap,Resumed,Incident,Excluded
+eventId,Lap,Resumed,Incident,Excluded
 2,33,N,"Torrential rain and crashes of Sébastien Buemi, Sebastian Vettel and Giancarlo Fisichella. Half points were awarded.",
 45,5,R,"Torrential rain and crashes involving Jenson Button, Nico Rosberg, Adrian Sutil, Lewis Hamilton, Scott Speed and Vitantonio Liuzzi.","Jenson Button, Nico Rosberg, Adrian Sutil, Scott Speed and Vitantonio Liuzzi."
 110,56,N,Crashes of Mark Webber and Fernando Alonso.,
