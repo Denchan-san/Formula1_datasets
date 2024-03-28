@@ -60,10 +60,12 @@ event_facts_df = event_facts_df[[
 ]]
 
 event_facts_df = event_facts_df.drop(['race_positionText', 'sprint_positionText'], axis=1)
-event_facts_df['qualifying_position'] = event_facts_df['qualifying_position'].astype('Int64')
-event_facts_df['sprint_grid'] = event_facts_df['sprint_grid'].astype('Int64')
-event_facts_df['sprint_positionOrder'] = event_facts_df['sprint_positionOrder'].astype('Int64')
-event_facts_df['sprint_laps'] = event_facts_df['sprint_laps'].astype('Int64')
-event_facts_df['sprint_statusId'] = event_facts_df['sprint_statusId'].astype('Int64')
+event_facts_df = event_facts_df.astype({
+    'qualifying_position': 'Int64',
+    'sprint_grid': 'Int64',
+    'sprint_positionOrder': 'Int64',
+    'sprint_laps': 'Int64',
+    'sprint_statusId': 'Int64'
+})
 
 event_facts_df.to_csv(join(OUTPUT_CSV_DIR, 'event_facts.csv'), index=False)
