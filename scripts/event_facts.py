@@ -60,5 +60,6 @@ event_facts_df = event_facts_df[[
 ]]
 
 event_facts_df = event_facts_df.drop(['race_positionText', 'sprint_positionText'], axis=1)
+event_facts_df['qualifying_position'] = event_facts_df['qualifying_position'].astype('Int64')
 
 event_facts_df.to_csv(join(OUTPUT_CSV_DIR, 'event_facts.csv'), index=False)
