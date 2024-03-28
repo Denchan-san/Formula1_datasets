@@ -200,7 +200,7 @@ CREATE TABLE event_facts (
     sprint_grid INT,
     sprint_position INT,
     sprint_position_order INT,
-    sprint_points INT,
+    sprint_points FLOAT,
     sprint_laps INT,
     sprint_time VARCHAR(30),
     sprint_milliseconds INT,
