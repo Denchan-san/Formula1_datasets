@@ -9,5 +9,6 @@ class Environment:
         self.DB_PASSWORD = os.getenv("DB_PASSWORD")
         self.DB_HOST = os.getenv("DB_HOST")
         self.DB_PORT = os.getenv("DB_PORT")
+        self.CLIENT_ENCODING = os.getenv("CLIENT_ENCODING")
 
 env = Environment()

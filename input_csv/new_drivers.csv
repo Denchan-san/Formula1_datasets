@@ -1,0 +1,3 @@
+driverRef,number,code,forename,surname,dob,nationality,url,Championships,Race_Entries,Race_Starts,Pole_Positions,Race_Wins,Podiums,Fastest_Laps,Points,Active,Decade,Pole_Rate,Start_Rate,Win_Rate,Podium_Rate,FastLap_Rate,Points_Per_Entry,Years_Active,Champion
+"hamilton",44,"HAM","Lewis","Hamilton","1985-01-07","British","http://en.wikipedia.org/wiki/Lewis_Hamilton",7,311,311,103,103,191,61,4415.5,True,2010,0.331189711,1.0,0.331189711,0.61414791,0.196141479,14.1977492,16,True
+"bearman",38,"BEA","Oliver","Bearman","2005-05-08","British","https://en.wikipedia.org/wiki/Oliver_Bearman",0,1,1,0,0,0,0,6,False,2020,0,1.0,0,0,0,6,1,False
