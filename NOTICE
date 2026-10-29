@@ -1,0 +1,26 @@
+Formula1_datasets
+Copyright 2026 Formula1_datasets contributors
+
+Original project contributions are licensed under the Apache License,
+Version 2.0. Third-party data retains its upstream terms; see
+DATA_LICENSE.md for scope, provenance, and transformation details.
+
+This project includes or derives data from:
+
+Formula 1 World Championship
+Vopani (rohanrao), compiled from Ergast
+https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020/data
+Kaggle-declared license: CC0: Public Domain
+
+Formula 1 Race Events
+James Trotman (jtrotman), collected from Wikipedia lists
+https://www.kaggle.com/datasets/jtrotman/formula-1-race-events
+Kaggle-declared license: CC0: Public Domain
+
+F1 Drivers dataset
+Aditi Awasthi (petalme)
+https://www.kaggle.com/datasets/petalme/f1-drivers-dataset
+Kaggle-declared license: Apache 2.0
+
+Kaggle license declarations checked on 2026-10-29.
+These attribution notices do not modify the applicable licenses.
